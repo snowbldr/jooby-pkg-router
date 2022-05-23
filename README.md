@@ -13,14 +13,14 @@ where the route is being handled.
 
 ## How to use it
 First install the dependency
-Gradle:
+Gradle kotlin:
 ```kotlin
-implementation("io.github.snowbldr.jooby:jooby-pkg-router")
+implementation("io.github.snowbldr.jooby:jooby-pkg-router:1.0.0")
 ```
 Maven:
 ```xml
 <dependency>
-    <groupId>io.github.snowbldr</groupId>
+    <groupId>io.github.snowbldr.jooby</groupId>
     <artifactId>jooby-pkg-router</artifactId>
     <version>1.0.0</version>
 </dependency>
