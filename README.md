@@ -15,12 +15,12 @@ where the route is being handled.
 First install the dependency
 Gradle:
 ```kotlin
-implementation("com.snowbldr.jooby:jooby-pkg-router")
+implementation("io.github.snowbldr.jooby:jooby-pkg-router")
 ```
 Maven:
 ```xml
 <dependency>
-    <groupId>com.snowbldr.jooby</groupId>
+    <groupId>io.github.snowbldr</groupId>
     <artifactId>jooby-pkg-router</artifactId>
     <version>1.0.0</version>
 </dependency>
@@ -47,7 +47,7 @@ These routes map to the following paths:
 
 Here's an example of one of index the routes:
 ```java
-import com.snowbldr.jooby.pkg.router.JoobyRoute;
+import JoobyRoute;
 import io.jooby.Context;
 import javax.annotation.Nonnull;
 
@@ -61,7 +61,7 @@ public class index implements JoobyRoute {
 
 Install the PackageRouter extension in your Jooby app, and pass the base package containing your routes.
 ```java
-import com.snowbldr.jooby.pkg.router.PackageRouter;
+import PackageRouter;
 import static io.jooby.Jooby.runApp;
 public class MyApp {
     public static void main(String[] args) {

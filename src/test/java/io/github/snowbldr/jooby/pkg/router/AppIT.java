@@ -1,4 +1,4 @@
-package com.snowbldr.jooby.pkg.router;
+package io.github.snowbldr.jooby.pkg.router;
 
 import io.jooby.Jooby;
 import io.jooby.ServerOptions;
@@ -33,7 +33,7 @@ class AppIT {
                 new String[]{},
                 app -> {
                     app.setServerOptions(new ServerOptions().setPort(port));
-                    app.install(new PackageRouter("com.snowbldr.jooby.pkg.router.www"));
+                    app.install(new PackageRouter("io.github.snowbldr.jooby.pkg.router.www"));
                 }
         )).start();
         String response = getString(appUrl + "/health");

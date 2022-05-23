@@ -1,6 +1,6 @@
-package com.snowbldr.jooby.pkg.router.www.stuff.$param;
+package io.github.snowbldr.jooby.pkg.router.www.stuff.$param;
 
-import com.snowbldr.jooby.pkg.router.JoobyRoute;
+import io.github.snowbldr.jooby.pkg.router.JoobyRoute;
 import io.jooby.Context;
 
 import javax.annotation.Nonnull;

@@ -1,4 +1,4 @@
-package com.snowbldr.jooby.pkg.router;
+package io.github.snowbldr.jooby.pkg.router;
 
 import io.jooby.*;
 import org.reflections.Reflections;
