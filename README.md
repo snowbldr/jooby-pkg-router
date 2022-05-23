@@ -72,6 +72,34 @@ public class MyApp {
 
 That's it!
 
+See [Test Routes](https://github.com/snowbldr/jooby-pkg-router/tree/main/src/test/java/io/github/snowbldr/jooby/pkg/router/www), 
+[Integration Tests](https://github.com/snowbldr/jooby-pkg-router/blob/main/src/test/java/io/github/snowbldr/jooby/pkg/router/AppIT.java),
+and [Example app](https://github.com/snowbldr/jooby-pkg-router/blob/main/src/test/java/io/github/snowbldr/jooby/pkg/router/Example.java)
+For more examples
+
+## Jooby instance (app) access
+To get access to the Jooby instance (the app) from a JoobyRoute, add a constructor with Jooby as a parameter and it will
+be injected when the Route is instantiated.
+
+```java
+import JoobyRoute;
+import io.jooby.Context;
+import io.jooby.Jooby;
+import javax.annotation.Nonnull;
+
+public class index implements JoobyRoute {
+    private final Jooby app;
+    
+    public index(Jooby app){
+        this.app = app;
+    }
+    @Override
+    public Object get(@Nonnull Context ctx) {
+        return "Running in app " + app.getName();
+    }
+}
+```
+
 ## Path Parameters
 Single parameters are supported by prefixing the name of the class with a `$` (i.e. $userId.java)
 

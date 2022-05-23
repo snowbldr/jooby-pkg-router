@@ -12,6 +12,9 @@ import java.util.stream.Collectors;
 import static io.jooby.Router.METHODS;
 import static org.reflections.scanners.Scanners.SubTypes;
 
+/**
+ * A Jooby extension that provides automated routing configuration based on packages and class names
+ */
 public class PackageRouter implements Extension {
     private final String routePackage;
 
