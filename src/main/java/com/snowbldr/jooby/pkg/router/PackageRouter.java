@@ -74,7 +74,7 @@ public class PackageRouter implements Extension {
 
         path = "/" + Arrays.stream(path.split("/"))
                 .map(part -> part.startsWith("$") ? "{" + part.substring(1) + "}" : part)
-                .map(part -> part.endsWith("_") ? part.substring(0, part.length() - 1) + "*path" : part)
+                .map(part -> part.endsWith("_") ? part.substring(0, part.length() - 1) + "*restPath" : part)
                 .collect(Collectors.joining("/"));
 
         if (path.endsWith("index")) {

@@ -8,6 +8,6 @@ import javax.annotation.Nonnull;
 public class $paramTwo implements JoobyRoute {
     @Override
     public Object get(@Nonnull Context ctx) {
-        return ctx.path("paramTwo")+" and "+ctx.path("paramTwo").value();
+        return ctx.path("param")+" and "+ctx.path("paramTwo").value();
     }
 }

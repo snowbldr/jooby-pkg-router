@@ -138,4 +138,15 @@ class AppIT {
         assertThat(event.get()).isEqualTo("data:hello");
     }
 
+    @Test
+    public void nestedParamResolves() {
+        assertThat(getString(appUrl + "/stuff/foo/bar")).isEqualTo("foo and bar");
+    }
+
+    @Test
+    public void catchAllResolves() {
+        assertThat(getString(appUrl + "/stuff/meow/catchAll/fizzle/bizzle/bazzle")).isEqualTo("meow at /fizzle/bizzle/bazzle");
+    }
+
+
 }
